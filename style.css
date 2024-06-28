@@ -1,0 +1,120 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #5D4037;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 20px;
+}
+
+header {
+    background: #5D4037;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: #DAA520;
+    font-size: 60px;
+    font-family: "Roboto Light", sans-serif;
+
+
+    nav {
+        padding: 10px;
+        color: #999;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: #000;
+        text-decoration: none;
+        background-color: #DAA520;
+        padding: 10px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+}
+
+main {
+    background-color: #5D4037;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    a:visited {
+        color: #fff;
+    }
+
+    a:visited:hover {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #fff;
+    color: #DAA520;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #5D4037;
+        font-family: "Roboto Light", sans-serif;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bolder;
+        background-color: #5D4037;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bolder;
+        background-color: #5D4037;
+        padding: 5px;
+    }
+}
