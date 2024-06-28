@@ -60,7 +60,7 @@ main {
     background-color: #5D4037;
     margin: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     justify-content: center;
 
@@ -88,7 +88,6 @@ main {
 section {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
     background-color: #fff;
     color: #DAA520;
     padding: 20px;
