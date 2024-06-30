@@ -14,9 +14,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
+.container{
+    max-width: 380px;
+}
 main {
     padding-top: 20px;
 }
@@ -75,6 +77,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 25px;
+    max-width: 390px;
 
     a {
         color: white;
@@ -104,7 +107,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: white;;
-    width: 100%;
+
 }
 
 
@@ -125,8 +128,8 @@ nav {
     --d: .8em;
     --c: .8em;
     margin: 25px;
-    padding: 20px 30px;
-    width:74%;
+    padding: 20px 35px;
+    max-width: 390px;
     line-height: 1.8;
     background: conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0);
     clip-path: polygon(var(--c) 0, calc(100% - var(--s)) 0, calc(100% - var(--s)) var(--d), 100% var(--d), calc(100% - var(--c)) calc(50% + var(--d) / 2), 100% 100%, calc(100% - var(--s) - var(--d)) 100%, calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), var(--c) calc(100% - var(--d)), 0 calc(50% - var(--d) / 2));
@@ -142,8 +145,8 @@ nav {
     --d: .8em;
     --c: .8em;
     margin: 25px;
-    padding: 20px 20px;
-    width:75%;
+    max-width: 390px;
+    padding: 20px 35px;
     line-height: 1.8;
     background: conic-gradient(from 45deg at left var(--s) top var(--d), #0008 12.5%, #0000 0 37.5%, #0004 0);
     clip-path: polygon(calc(100% - var(--c)) var(--d), calc(var(--s) + var(--d)) var(--d), calc(var(--s) + var(--d)) 0, 0 0, var(--c) calc(50% - var(--d) / 2), 0 calc(100% - var(--d)), var(--s) calc(100% - var(--d)), var(--s) 100%, calc(100% - var(--c)) 100%, 100% calc(50% + var(--d) / 2));
