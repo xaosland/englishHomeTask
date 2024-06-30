@@ -13,8 +13,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
+}
+main{
+    padding-top: 20px;
+}
 
 h2 {
     margin-block-start: 0;
@@ -32,17 +35,23 @@ h1 {
 
 input {
     width: 500px;
-    border: none;
+border: none;
     height: 40px;
-    text-indent: 10px;
+    text-indent: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
 }
 
 button {
     height: 42px;
     width: 300px;
     border: none;
-    background: #DAA520;
+    background: #ffffff;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+
 }
 
 header {
@@ -60,8 +69,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-
+    padding: 25px;
     a {
         color: white;
         text-decoration: none;
@@ -77,16 +85,16 @@ nav {
         align-items: center;
         justify-content: end;
         list-style: none;
+
     }
 }
 
 .articleTitle {
-
     width: 100%;
-
 }
 
 article {
+
     color: black;
     display: flex;
     flex-direction: column;
@@ -94,8 +102,6 @@ article {
     align-items: center;
     /*background-image: url("https://img.goodfon.com/original/1920x1080/f/90/minimalizm-art-zviozdy.jpg");*/
     /*background-size: cover;*/
-
-
 }
 
 .adding__form {
@@ -103,10 +109,8 @@ article {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     color: white;;
     width: 100%;
-
 }
 
 
@@ -142,14 +146,6 @@ section {
     clip-path: polygon(var(--c) 0, calc(100% - var(--s)) 0, calc(100% - var(--s)) var(--d), 100% var(--d), calc(100% - var(--c)) calc(50% + var(--d) / 2), 100% 100%, calc(100% - var(--s) - var(--d)) 100%, calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), var(--c) calc(100% - var(--d)), 0 calc(50% - var(--d) / 2));
     background-color: #fff; /* the main color */
     transform: scale(1.15) rotateZ(-0.5deg);
-
-    &:hover {
-        text-decoration: underline;
-        transform: scale(1.15) rotateZ(0deg);
-        transition: transform 0.5s ease-in-out; /* Add a transition effect */
-
-    }
-
 }
 
 .ribbon {
@@ -165,13 +161,21 @@ section {
     line-height: 1.8;
     background: conic-gradient(from 45deg at left var(--s) top var(--d), #0008 12.5%, #0000 0 37.5%, #0004 0);
     clip-path: polygon(calc(100% - var(--c)) var(--d), calc(var(--s) + var(--d)) var(--d), calc(var(--s) + var(--d)) 0, 0 0, var(--c) calc(50% - var(--d) / 2), 0 calc(100% - var(--d)), var(--s) calc(100% - var(--d)), var(--s) 100%, calc(100% - var(--c)) 100%, 100% calc(50% + var(--d) / 2));
-    background-color: #dcdcdc; /* the main color */
+    background-color: #F06418; /* the main color */
     transform: scale(1.15) rotateZ(1deg);
+}
 
-    &:hover {
-        text-decoration: underline;
-        transform: scale(1.15) rotateZ(0deg);
-        transition: transform 0.5s ease-in-out; /* Add a transition effect */
+.animate {
+    animation: appear 0.5s forwards; /* Add an animation */
+}
 
+@keyframes appear {
+    0% {
+        transform: scale(0.5) rotateZ(1deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.15) rotateZ(1deg);
+        opacity: 1;
     }
 }

@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         dataBase.tasks.push(input.value);
         showTasks(dataBase.tasks, showTask);
         input.value = "";
+        const lastRibbon = showTask.querySelector(".ribbon:last-child, .ribbon2:last-child");
+        lastRibbon.classList.add("animate");
+
     })
     showTasks(dataBase.tasks, showTask);
 })
