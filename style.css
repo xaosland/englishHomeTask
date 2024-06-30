@@ -1,12 +1,20 @@
 body {
     background-color: #B9C7E2;
     margin: 0 auto;
-    font-family: "Roboto Light", sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     box-sizing: border-box;
     height: 100%;
-    max-width: 1980px;
-width: 100%;
+
 }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 h2 {
     margin-block-start: 0;
@@ -16,10 +24,14 @@ h2 {
 h1 {
     margin-block-start: 0;
     margin-block-end: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 input {
-    width: 100%;
+    width: 500px;
     border: none;
     height: 40px;
     text-indent: 10px;
@@ -27,7 +39,7 @@ input {
 
 button {
     height: 42px;
-    width: 200px;
+    width: 300px;
     border: none;
     background: #DAA520;
     cursor: pointer;
@@ -37,12 +49,13 @@ header {
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    max-width: 1000px;
 
 }
 
 nav {
-    background-color: #748DC1;
-    color: white;
+    background-color: #F06418;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -53,6 +66,10 @@ nav {
         color: white;
         text-decoration: none;
         padding: 20px;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     ul {
@@ -75,8 +92,8 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("https://img.goodfon.com/original/1920x1080/f/90/minimalizm-art-zviozdy.jpg");
-    background-size: cover;
+    /*background-image: url("https://img.goodfon.com/original/1920x1080/f/90/minimalizm-art-zviozdy.jpg");*/
+    /*background-size: cover;*/
 
 
 }
@@ -86,63 +103,75 @@ article {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #39588F;
+
     color: white;;
     width: 100%;
+
 }
 
-.articleBody :hover {
-    z-index: 1;
-    color: #fff;
-    background: #2D4B81;
-    opacity: 1;
-    transform: scale(1) rotateZ(1deg);
-    transition: all 1s cubic-bezier(0.33, 1, 0.68, 1);
-    cursor: pointer;
-}
 
 section {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
-
-.ribbon {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    --r: .8em;
-    margin: 10px;
-    line-height: 1.8;
-    clip-path: polygon(-100vw 0, calc(100% - var(--r)) 0, 100% 50%, calc(100% - var(--r)) 100%, -100vw 100%);
-    border-image: conic-gradient(#DAA520 0 0) fill 0 / / 100vw;
-    overflow: auto;
-    transform: scale(1) rotateZ(2deg);
-}
-
-
-.ribbon2 {
-    margin: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    --r: .8em;
-    line-height: 1.8;
-    clip-path: polygon(100vw 0, var(--r) 0, 0 50%, var(--r) 100%, 100vw 100%);
-    border-image: conic-gradient(#bd1550 0 0) fill 0 / / 100vw;
-    overflow: hidden;
-    transform: scale(1.15) rotateZ(-5deg);
-}
 
 .delete {
     width: 20px;
     height: 20px;
     background: url("trash.png") center center/cover no-repeat;
     cursor: pointer
+}
+
+.ribbon2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    --s: 1.8em; /* the ribbon size */
+    --d: .8em; /* the depth */
+    --c: .8em; /* the cutout part */
+    margin: 10px;
+    padding: 20px;
+    width: 600px;
+    line-height: 1.8;
+    background: conic-gradient(at right var(--s) bottom var(--d), #0004 62.5%, #0008 0 75%, #0000 0);
+    clip-path: polygon(var(--c) 0, calc(100% - var(--s)) 0, calc(100% - var(--s)) var(--d), 100% var(--d), calc(100% - var(--c)) calc(50% + var(--d) / 2), 100% 100%, calc(100% - var(--s) - var(--d)) 100%, calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), var(--c) calc(100% - var(--d)), 0 calc(50% - var(--d) / 2));
+    background-color: #fff; /* the main color */
+    transform: scale(1.15) rotateZ(-0.5deg);
+
+    &:hover {
+        text-decoration: underline;
+        transform: scale(1.15) rotateZ(0deg);
+        transition: transform 0.5s ease-in-out; /* Add a transition effect */
+
+    }
+
+}
+
+.ribbon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    --s: 1.8em; /* the ribbon size */
+    --d: .8em; /* the depth */
+    --c: .8em; /* the cutout part */
+    margin: 10px;
+    padding: 20px;
+    width: 600px;
+    line-height: 1.8;
+    background: conic-gradient(from 45deg at left var(--s) top var(--d), #0008 12.5%, #0000 0 37.5%, #0004 0);
+    clip-path: polygon(calc(100% - var(--c)) var(--d), calc(var(--s) + var(--d)) var(--d), calc(var(--s) + var(--d)) 0, 0 0, var(--c) calc(50% - var(--d) / 2), 0 calc(100% - var(--d)), var(--s) calc(100% - var(--d)), var(--s) 100%, calc(100% - var(--c)) 100%, 100% calc(50% + var(--d) / 2));
+    background-color: #dcdcdc; /* the main color */
+    transform: scale(1.15) rotateZ(1deg);
+
+    &:hover {
+        text-decoration: underline;
+        transform: scale(1.15) rotateZ(0deg);
+        transition: transform 0.5s ease-in-out; /* Add a transition effect */
+
+    }
 }
